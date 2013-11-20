@@ -1,0 +1,14 @@
+{
+  "name": "JS2013F-assignment8",
+  "version": "0.0.0",
+  "description": "Package / Repo for PCS's 8th assignment repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "testem"
+  },
+  "author": "David Manning",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "tape": "~2.1.0"
+  }
+}
