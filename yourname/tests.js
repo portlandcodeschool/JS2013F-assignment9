@@ -124,7 +124,7 @@ test('should insert an object at a given array index', function (t) {
   t.deepEqual(array1, [1, 2, 2.5, 3]);
 
   arrays.insertAt(array2, 5, 'Bleep');
-  t.deepEqual(array2, ['a', 'b', 'c', '', 'Bleep']);
+  t.deepEqual(array2, ['a', 'b', 'c', undefined, 'Bleep']);
 
   t.end();
 });
@@ -154,9 +154,9 @@ test('test for the presence of item in an array', function (t) {
   var array2 = ['lions', 'tigers', 'bears'];
   var array3 = [{name: 'Steve'}, {name: 'Brian'}, {name: 'Alfonso'}];
 
-  t.equal(arrays.itsInThere(array1, 3), true);
-  t.equal(arrays.itsInThere(array2, 'obama'), false);
-  t.equal(arrays.itsInThere(array3, {name: 'Brian'}), true);
+  t.deepEqual(arrays.itsInThere(array1, 3), true);
+  t.deepEqual(arrays.itsInThere(array2, 'obama'), false);
+  t.deepEqual(arrays.itsInThere(array3, {name: 'Brian'}), true);
 
   t.end();
   
