@@ -2,16 +2,19 @@ module.exports.insertAt = function(arr, index, item) {
 
 // This function doesn't need to return anything, but rather modify
 // the passed array in place.
-
-var result = arr;
-
 //This should not be a splice method, instead we shoudl build a loop
-
 // for (i ; ; )
-
 // result.splice(index, null, item);
 
-
+for (i=0  ;i < arr.length; i++) {
+    if (arr[i] === arr[index]) {
+        arr.splice(index, 0, item);
+    }
+    else if (arr[index] == nil) {
+        arr.splice(index, 0, undefined);
+        arr.splice(index, 0, item);
+    }
+}
 
 return arr;
 
