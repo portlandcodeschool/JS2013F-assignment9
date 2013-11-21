@@ -14,14 +14,16 @@ function isFirstTest (num){
     
 }
 
-function isBetween (min, max){
+function isBetween(){
 
-    if (min < 0) {
-        return min + Math.random() * (Math.abs(min)+max);
-    }else {
-        return min + Math.random() * max;
+    var result = 0;
+    
+    for (i = 0; i < 30; i++) {
+        result = Math.floor((Math.random() * 30) +2);
+            if (result >= 20 && result <= 30) {
+                return result;
+            }
     }
-
 }
 
 module.exports.isEven = isEven;
