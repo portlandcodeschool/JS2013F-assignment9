@@ -6,16 +6,17 @@ module.exports.insertAt = function(arr, index, item) {
 // for (i ; ; )
 // result.splice(index, null, item);
 
-for (i=0  ;i < arr.length; i++) {
-    if (arr[i] === arr[index]) {
-        arr.splice(index, 0, item);
+    for (i=0  ;i < arr.length; i++) {
+        if (arr[i] == arr[index]) {
+            arr.splice(index, 0, item);
+            break;
+        }
+        else if (typeof arr[index] == 'undefined') {
+            arr[index] = item;
+            break;
+        }
     }
-    else if (arr[index] == nil) {
-        arr.splice(index, 0, undefined);
-        arr.splice(index, 0, item);
-    }
-}
-
+    
 return arr;
 
 }
