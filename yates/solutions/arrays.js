@@ -5,20 +5,16 @@ module.exports.insertAt = function(arr, index, item) {
 }
 
 module.exports.alphabetSorter = function(a, b) {
-  if (typeof a === "string") {
-    a = a.toString().toLowerCase();
-  }
-
-  if (typeof b === "string") {
-    b = b.toString().toLowerCase();
-  }
-
-  if (a < b)
+  
+  if (typeof a === 'string' && typeof b === 'string') {
+    return a.toLowerCase() < b.toLowerCase() ? -1 : 1;
+  } else if (typeof a === 'string' || typeof b !== 'string') {
     return -1;
-  if (a > b)
+  } else if (typeof b === 'string' || typeof b !== 'string') {
     return 1;
-  if (a === b)
+  } else {
     return 0;
+  }
 
 }
 
