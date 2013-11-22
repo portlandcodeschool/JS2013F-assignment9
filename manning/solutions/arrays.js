@@ -5,7 +5,7 @@ module.exports.insertAt = function(arr, index, item) {
 
   var addition = [ item ];
 
-  for (var i = index; i > arr.length + 1; i--) {
+  for (var i = index; i > arr.length; i--) {
     addition.unshift(undefined);
   }
 
@@ -32,16 +32,14 @@ module.exports.alphabetSorter = function(a, b) {
 }
 
 module.exports.itsInThere = function(arr, item) {
-  if (typeof item === 'object') {
-    arr.forEach(function(element, index) {
-      console.log(element, item);
-      if (typeof element === 'object' && objEquiv(element, item)) {
-          return true;
-      }
-    });
 
-    return false;
-  } 
+  found = false;
 
-  return item in arr;
+  arr.forEach(function (element, index, array) {
+    if (element === item)
+      found = true;
+  });
+
+  return found;
+
 }
