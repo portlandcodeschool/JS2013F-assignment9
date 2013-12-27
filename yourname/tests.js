@@ -2,7 +2,7 @@ var test         = require('tape');
 var romnum       = require('../romnum');
 var conditionals = require('./solutions/conditionals');
 var loops        = require('./solutions/loops');
-var arrays        = require('./solutions/arrays');
+var arrays       = require('./solutions/arrays');
 
 test('Example test', function (t) {
   t.equal(5, 5);
